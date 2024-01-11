@@ -55,3 +55,10 @@ and the summary statistics,
 | RB 300 FR 50 June 6 630pm | 940635 | 0.313545 |
 
 On a second pass, the program will ignore the `*-ANALYZED.jpg` file and overwrite the csv table.
+
+
+### Settings up crontabs
+Install `libcamera` with the following command
+```
+sudo apt install libcamera-apps
+```
