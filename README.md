@@ -29,10 +29,10 @@ The 'Create Analyzed Images' checkbox lets you save an image showing where the p
 The 'Fuzz Factor' slider determines the algorithm's green sensitivity. Increase it if necessary to eliminate background noise. 
 
 ### Linux Dependency Installation
-Install 'numpy' and 'Pillow' using the terminal commands
+Install `numpy` and `Pillow` using the terminal commands
 ```
 sudo apt install python3-numpy
-sudo apt install python3-Pillow
+sudo apt install python3-pil
 ```
 
 ### Without GUI
