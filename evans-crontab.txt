@@ -1,3 +1,4 @@
 # minute, hour, day of month, month, day of week
 # (everyday) run libcamera
-* * 0 * * sh libcamera-jpeg -o /home/cpl/Documents/images/`date +\%Y\%m\%d\%H\%M\%S`.jpg
+* * 0 * * /home/cpl/Documents/green-pixel-analysis/evans-shell-script.sh
+
