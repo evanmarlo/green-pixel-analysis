@@ -98,8 +98,7 @@ def _analyzeImage_( fileName , save, greenFuzz ):
                 im.putpixel((x,y), (255, 0, 0))   # replace the pixel with a red one, indicating it was detected as green
 
     imgName = os.path.splitext(fileName)[0]
-    imgName.split('/')
-    imgName = imgName[-1]
+    imgName = imgName.split('/')[-1]
     # save image with detected pixels next to original image
     if(save): im.save(imgName + "-ANALYZED.jpg") 
 
