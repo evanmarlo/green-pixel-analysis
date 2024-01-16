@@ -3,7 +3,8 @@ mkdir -p /home/cpl/Documents/images
 libcamera-jpeg -o /home/cpl/Documents/images/$(date +"%m_%d_%Y_%H:%M").jpg
 
 # Feed image into python program, writing CSV file
-touch /home/cpl/Documents/pixel-analysis-logging/image-summary.csv
+cd /home/cpl/Documents/pixel-analysis-logging
+touch image-summary.csv
 cd /home/cpl/Documents/green-pixel-analysis
 python3 evan-main.py $(date +"%m_%d_%Y_%H:%M").jpg
 
