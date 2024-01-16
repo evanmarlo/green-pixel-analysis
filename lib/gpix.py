@@ -37,7 +37,7 @@ class ImageSummary:
                 f.seek(0, 0)
                 f.write('Image Name,Total Green Pixels,Percent of Total'.rstrip('\r\n') + '\n' + content)
                 
-        with open('image-summary.csv', 'a') as f:
+        with open(hostname + '-image-summary.csv', 'a') as f:
             for i in self.sumData:
                 f.write(i['imgName'] + ',' + str(i['greenTot']) + ',' + str(i['percOfWhole']) + '\n')
 
