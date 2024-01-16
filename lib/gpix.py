@@ -8,6 +8,7 @@ try:
 except ImportError:
     print("You don't have the numpy package installed. Install it with 'pip install numpy'")
 
+from distutils.command.build_scripts import first_line_re
 import time
 import os
 import re
@@ -29,6 +30,12 @@ class ImageSummary:
         print('Writing CSV...')
 
         # create csv and write header row
+        with open('image-summary.csv', 'r+') as f:
+            if f.readline() != 'Image Name,Total Green Pixels,Percent of Total':
+                content = f.read()
+                f.seek(0, 0)
+                f.write('Image Name,Total Green Pixels,Percent of Total'.rstrip('\r\n') + '\n' + content)
+                
         with open('image-summary.csv', 'a') as f:
             for i in self.sumData:
                 f.write(i['imgName'] + ',' + str(i['greenTot']) + ',' + str(i['percOfWhole']) + '\n')
