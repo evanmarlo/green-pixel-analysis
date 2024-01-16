@@ -10,7 +10,8 @@ python3 evan-main.py $(date +"%m_%d_%Y_%H:%M").jpg
 cd /home/cpl/Documents/pixel-analysis-logging
 git add --all
 # git commit -m "Automated push testing"
-git commit -m "Automated push from $hostname"
+var=$(hostname -f)
+git commit -m "$var"
 git push
 
 
