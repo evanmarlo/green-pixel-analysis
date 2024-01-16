@@ -98,6 +98,8 @@ def _analyzeImage_( fileName , save, greenFuzz ):
         'percOfWhole': green / (im.width * im.height)
     })
 
+    return imgSum
+
     # # return info about the image as a json object
     # return({                                    
     #     'imgName': imgName,
