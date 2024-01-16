@@ -22,13 +22,14 @@ class ImageSummary:
     # write sumData to CSV
     # location sets the save location for the csv.
     # By default it uses the parent directory
+    # IF image-summary already exists, append to it
     def writeCsv( self, location = "." ): 
         os.chdir(location)
 
         print('Writing CSV...')
 
         # create csv and write header row
-        c = csv.writer(open('image-summary.csv', 'w'), lineterminator='\n')
+        c = csv.writer(open('test-image-summary.csv', 'w'), lineterminator='\n')
         c.writerow(['Image Name', 'Total Green Pixels', 'Percent of Total']) 
 
         # write a row for each image analyzed
