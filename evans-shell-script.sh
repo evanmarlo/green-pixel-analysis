@@ -11,7 +11,7 @@ cd /home/cpl/Documents/pixel-analysis-logging
 git add --all
 # git commit -m "Automated push testing"
 var=$(hostname -f)
-git commit -m "$var"
+git commit -m "Automated push from $var"
 git push
 
 
