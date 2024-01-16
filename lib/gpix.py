@@ -39,7 +39,7 @@ class ImageSummary:
     def append( self, data ):
         self.sumData.append(data)
 
-def countPix( folderLoc, save, fuzzFactor ):
+def countPix(folderLoc, save, fuzzFactor):
     # change directory to chosen folder 
     os.chdir(folderLoc)
     print("Looking in folder: " + folderLoc)
@@ -64,6 +64,8 @@ def countPix( folderLoc, save, fuzzFactor ):
 
 def _analyzeImage_( fileName , save, greenFuzz ):
     start = time.time() # start timer
+
+    imgSum = ImageSummary()
 
     # open image, resize, convert to RGB
     # we resize every image to the same size to remove zoom/crop effects on image size
@@ -90,12 +92,18 @@ def _analyzeImage_( fileName , save, greenFuzz ):
     end = time.time() # end timer
     print("Completed in " + str(end-start) + " sec.") # print time elapsed
 
-    # return info about the image as a json object
-    return({                                    
+    imgSum.append({                                    
         'imgName': imgName,
         'greenTot': green,
         'percOfWhole': green / (im.width * im.height)
     })
+
+    # # return info about the image as a json object
+    # return({                                    
+    #     'imgName': imgName,
+    #     'greenTot': green,
+    #     'percOfWhole': green / (im.width * im.height)
+    # })
 
 # check if image is a valid image filetype and
 # if the image has not already been analyzed (No -ANALYZED.jpg images)
