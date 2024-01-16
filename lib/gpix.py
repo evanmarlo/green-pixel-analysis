@@ -29,7 +29,7 @@ class ImageSummary:
         print('Writing CSV...')
 
         # create csv and write header row
-        with open('image-summary.csv') as f:
+        with open('image-summary.csv', 'w') as f:
             for i in self.sumData:
                 f.write(i['imgName'] + ',' + str(i['greenTot']) + ',' + str(i['percOfWhole']))
 
