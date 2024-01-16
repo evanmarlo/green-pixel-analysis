@@ -12,7 +12,7 @@ from distutils.command.build_scripts import first_line_re
 import time
 import os
 import re
-import csv
+import socket
 
 # Object to store image summary data and write to CSV
 class ImageSummary:
@@ -30,7 +30,8 @@ class ImageSummary:
         print('Writing CSV...')
 
         # create csv and write header row
-        with open('image-summary.csv', 'r+') as f:
+        hostname = socket.gethostname()
+        with open(hostname + '-image-summary.csv', 'r+') as f:
             if f.readline() != 'Image Name,Total Green Pixels,Percent of Total':
                 content = f.read()
                 f.seek(0, 0)
