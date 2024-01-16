@@ -29,12 +29,16 @@ class ImageSummary:
         print('Writing CSV...')
 
         # create csv and write header row
-        c = csv.writer(open('test-image-summary.csv', 'w'), lineterminator='\n')
-        c.writerow(['Image Name', 'Total Green Pixels', 'Percent of Total']) 
+        with open('image-summary.csv') as f:
+            for i in self.sumData:
+                f.write([i['imgName'] + ',' + i['greenTot'] + ',' + i['percOfWhole']])
 
-        # write a row for each image analyzed
-        for i in self.sumData:
-            c.writerow([i['imgName'], i['greenTot'], i['percOfWhole']])
+        # c = csv.writer(open('test-image-summary.csv', 'w'), lineterminator='\n')
+        # c.writerow(['Image Name', 'Total Green Pixels', 'Percent of Total']) 
+
+        # # write a row for each image analyzed
+        # for i in self.sumData:
+        #     c.writerow([i['imgName'], i['greenTot'], i['percOfWhole']])
     
     # overload append() to add data to stored array
     def append( self, data ):
