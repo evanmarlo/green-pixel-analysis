@@ -1,4 +1,5 @@
-# libcamera-jpeg -o /home/cpl/Documents/images/test2.jpg
-# libcamera-jpeg -o /home/cpl/Documents/images/`\%m_\%d_\%Y_\%H:\%M:\%S`.jpg
+# Take picture and save it in "images"
+mkdir -p /home/cpl/Documents/images
 libcamera-jpeg -o /home/cpl/Documents/images/$(date +"%m_%d_%Y_%H:%M").jpg
-echo test
+
+# Feed image into python program
