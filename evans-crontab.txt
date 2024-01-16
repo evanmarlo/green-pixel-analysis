@@ -1,3 +1,3 @@
 # minute, hour, day of month, month, day of week
 # (everyday) run libcamera
-* * 0 * * sh /home/cpl/Documents/green-pixel-analysis/evans-shell-script.s
+* * 0 * * sh /home/cpl/Documents/green-pixel-analysis/evans-shell-script.sh
