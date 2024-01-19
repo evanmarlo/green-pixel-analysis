@@ -1,8 +1,8 @@
 hostname=$(hostname -f)
 
 # Take picture and save it in "images"
-mkdir -p /home/cpl/Documents/images
-libcamera-jpeg -o /home/cpl/Documents/images/$(date +"%m_%d_%Y_%H:%M").jpg
+mkdir -p /home/cpl/Documents/pixel-analysis-logging/$hostname-images
+libcamera-jpeg -o /home/cpl/Documents/pixel-analysis-logging/$hostname-images/$(date +"%m_%d_%Y_%H:%M").jpg
 
 # Feed image into python program, writing CSV file
 cd /home/cpl/Documents/pixel-analysis-logging

@@ -2,5 +2,7 @@
 
 from sys import argv
 from lib import gpix
+import socket
+hostname = socket.gethostname()
 
-gpix._analyzeImage_('/home/cpl/Documents/images/' + argv[1], False, 0).writeCsv('/home/cpl/Documents/pixel-analysis-logging')
+gpix._analyzeImage_('/home/cpl/Documents/pixel-analysis-logging/' + hostname + 'images/' + argv[1], True, 0).writeCsv('/home/cpl/Documents/pixel-analysis-logging')
