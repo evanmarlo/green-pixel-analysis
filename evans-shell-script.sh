@@ -11,7 +11,7 @@ cd /home/cpl/Documents/green-pixel-analysis
 python3 evan-main.py $(date +"%m_%d_%Y_%H:%M").jpg
 
 # Move analyzed image from green pixel analysis to pixel logging
-mv /home/cpl/Documents/green-pixel-analysis/$(date +"%m_%d_%Y_%H:%M").jpg /home/cpl/Documents/pixel-analysis-logging/$hostname-images
+mv /home/cpl/Documents/green-pixel-analysis/$(date +"%m_%d_%Y_%H:%M")-ANALYZED.jpg /home/cpl/Documents/pixel-analysis-logging/$hostname-images
 
 # Push CSV file to Git repo
 cd /home/cpl/Documents/pixel-analysis-logging
