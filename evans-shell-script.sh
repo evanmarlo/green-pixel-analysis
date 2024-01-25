@@ -1,5 +1,8 @@
 hostname=$(hostname -f)
 
+# Pull branch to be up-to-date
+git pull
+
 # Take picture and save it in "images"
 mkdir -p /home/cpl/Documents/pixel-analysis-logging/$hostname-images
 libcamera-jpeg -o /home/cpl/Documents/pixel-analysis-logging/$hostname-images/$(date +"%m_%d_%Y_%H:%M").jpg
