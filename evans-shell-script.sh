@@ -15,7 +15,7 @@ mv /home/cpl/Documents/green-pixel-analysis/$(date +"%m_%d_%Y_%H:%M")-ANALYZED.j
 
 # Push CSV file to Git repo
 cd /home/cpl/Documents/pixel-analysis-logging
-git add --all
+git add $hostname-images $hostname-image-summary.csv
 
 # git commit -m "Automated push testing"
 git commit -m "Automated push from $hostname"
