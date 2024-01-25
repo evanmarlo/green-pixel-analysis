@@ -1,7 +1,9 @@
 hostname=$(hostname -f)
 
 # Pull branch to be up-to-date
+cd /home/cpl/Documents/pixel-analysis-logging
 git pull
+cd
 
 # Take picture and save it in "images"
 mkdir -p /home/cpl/Documents/pixel-analysis-logging/$hostname-images
